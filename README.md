@@ -19,12 +19,12 @@ We introduce a grouped dropout strategy and modifies the CNN architecture to imp
 GDnet-IP. Experimental results on a dataset containing 20 insect species (15 pests and five beneficial insects) with 73,635 images demonstrated an increase in cross-validation accuracy from 84.68% to 92.12%, with notable improvements in the recognition rates for difficult-to-classify species. Out model showed significant accuracy advantages over standard dropout methods on test sets, with faster training times compared to four conventional CNN models, highlighting the suitability for mobile applications.
 
 <p style="float: center">
-  <img src="./gdnet-ip-arch.png" alt="Architecture of GDnet-IP" />
+  <img src="images/gdnet-ip-arch.png" alt="Architecture of GDnet-IP" />
   <div align="center">(A)</div>
 </p>
 <p float="center">
-  <img src="./iGDnet-IP.svg" style="display: block; width: 350px; height: auto" />
-  <img src="./weGDnet-IP.svg" style="display: block; width: 450px; height: auto" />
+  <img src="images/iGDnet-IP.svg" style="display: block; width: 350px; height: auto" />
+  <img src="images/weGDnet-IP.svg" style="display: block; width: 450px; height: auto" />
 </p>
 <div>
   <span style="font-weight: bold;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(B)</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
