@@ -23,8 +23,8 @@ GDnet-IP. Experimental results on a dataset containing 20 insect species (15 pes
   <div align="center">(A)</div>
 </p>
 <p float="center">
-  <img src="./iGDnet-IP.svg" style="display: block; width: 450px; height: auto" />
-  <img src="./weGDnet-IP.svg" style="display: block; width: 450px; height: auto" />
+  <img src="./iGDnet-IP.svg" style="display: block; width: 400px; height: auto" />
+  <img src="./weGDnet-IP.svg" style="display: block; width: 400px; height: auto" />
 </p>
 <div>
   <span style="font-weight: bold;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(B)</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
