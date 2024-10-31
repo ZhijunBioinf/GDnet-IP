@@ -18,6 +18,9 @@
 We introduce a grouped dropout strategy and modifies the CNN architecture to improve the accuracy of multi-class insect recognition. Leveraging the Inception module’s branching structure and the adaptive grouping properties of the WeDIV clustering algorithm, we developed two grouped dropout models, the iGDnet-IP and
 GDnet-IP. Experimental results on a dataset containing 20 insect species (15 pests and five beneficial insects) with 73,635 images demonstrated an increase in cross-validation accuracy from 84.68% to 92.12%, with notable improvements in the recognition rates for difficult-to-classify species. Out model showed significant accuracy advantages over standard dropout methods on test sets, with faster training times compared to four conventional CNN models, highlighting the suitability for mobile applications.
 
+[](./gdnet-ip-arch.png)
+<p align="center"><b>Architecture of GDnet-IP</b></p>
+
 ## Getting Started
 
 GDnet-IP has been tested with Python 3.?? and PyTorch 2.??. The user can easily set up the required environment using Conda by following these steps:
