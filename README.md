@@ -84,7 +84,7 @@ Supervisor: Zhijun Dai (daizhijun@hunau.edu.cn)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Citation
+## [Citation](https://www.mdpi.com/2077-0472/14/11/1915)
 
 **Dongcheng Li, Yongqi Xu, Zheming Yuan, Zhijun Dai\*. GDnet-IP: Grouped Dropout-Based Convolutional Neural Network for Insect Pest Recognition. Agriculture, 2024, 14(11), 1915.**
 
