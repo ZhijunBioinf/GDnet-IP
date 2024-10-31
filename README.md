@@ -22,6 +22,12 @@ GDnet-IP. Experimental results on a dataset containing 20 insect species (15 pes
   <img src="./gdnet-ip-arch.png" alt="Architecture of GDnet-IP" />
   <div align="center">(A)</div>
 </div>
+<p float="center">
+  <img src="./iGDnet-IP.svg" style="display: block; width: 500px; height: auto" />
+  <img src="./we-gdnet-ip.png" style="display: block; width: 500px; height: auto" />
+</p>
+<div align="left">(B)</div>
+<div align="right">(C)</div>
 
 <p align="center"><b>Architecture of GDnet-IP</b></p>
 
