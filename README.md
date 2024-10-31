@@ -18,18 +18,20 @@
 We introduce a grouped dropout strategy and modifies the CNN architecture to improve the accuracy of multi-class insect recognition. Leveraging the Inception module’s branching structure and the adaptive grouping properties of the WeDIV clustering algorithm, we developed two grouped dropout models, the iGDnet-IP and
 GDnet-IP. Experimental results on a dataset containing 20 insect species (15 pests and five beneficial insects) with 73,635 images demonstrated an increase in cross-validation accuracy from 84.68% to 92.12%, with notable improvements in the recognition rates for difficult-to-classify species. Out model showed significant accuracy advantages over standard dropout methods on test sets, with faster training times compared to four conventional CNN models, highlighting the suitability for mobile applications.
 
-<div style="position: relative; display: inline-block;">
+<p style="float: center">
   <img src="./gdnet-ip-arch.png" alt="Architecture of GDnet-IP" />
   <div align="center">(A)</div>
-</div>
-<p float="center">
-  <img src="./iGDnet-IP.svg" style="display: block; width: 500px; height: auto" />
-  <img src="./weGDnet-IP.svg" style="display: block; width: 500px; height: auto" />
 </p>
-<div align="left">(B)</div>
-<div align="right">(C)</div>
+<p float="center">
+  <img src="./iGDnet-IP.svg" style="display: block; width: 450px; height: auto" />
+  <img src="./weGDnet-IP.svg" style="display: block; width: 450px; height: auto" />
+</p>
+<div>
+  <span style="font-weight: bold;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(B)</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <span style="font-weight: bold;">(C)</span>
+</div>
 
-<p align="center"><b>Architecture of GDnet-IP</b></p>
+<p align="left"><b>Grouped dropout-based CNN for insect pest recognition. (A) Architecture of GDnet-IP; (B) Inception-based GDnet-IP, where the grey branch is randomly deactivated; (C) Clustering-based GDnet-IP, where the channels in 'Group 2' are randomly deactivated.</b></p>
 
 ## Getting Started
 
