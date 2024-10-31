@@ -1,5 +1,7 @@
 <a id="readme-top"></a>
 
+[downloads]: https://img.shields.io/github/downloads/ZhijunBioinf/GDnet-IP/total.svg?style=social&logo=github&label=Download
+[downloads-url]: https://github.com/ZhijunBioinf/GDnet-IP/releases
 [stars-shield]: https://img.shields.io/github/stars/ZhijunBioinf/GDnet-IP.svg?style=flat-square&color=b75347
 [stars-url]: https://github.com/ZhijunBioinf/GDnet-IP/stargazers
 [forks-shield]: https://img.shields.io/github/forks/ZhijunBioinf/GDnet-IP.svg?style=flat-square&color=df7e66
@@ -7,6 +9,7 @@
 
 # GDnet-IP: Grouped Dropout-Based Convolutional Neural Network for Insect Pest Recognition</h1>
 
+[![Downloads][downloads]][downloads-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Forks][forks-shield]][forks-url]
 
