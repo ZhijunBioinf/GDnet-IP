@@ -34,46 +34,82 @@ GDnet-IP. Experimental results on a dataset containing 20 insect species (15 pes
 <p align="left"><b>Grouped dropout-based CNN for insect pest recognition. (A) Architecture of GDnet-IP; (B) Inception-based GDnet-IP, where the grey branch is randomly deactivated; (C) Clustering-based GDnet-IP, where the channels in 'Group 2' are randomly deactivated.</b></p>
 
 ## Getting Started
+### **Prerequisites**
 
-GDnet-IP has been tested with Python 3.?? and PyTorch 2.??. The user can easily set up the required environment using Conda by following these steps:
+- Python 3.7+
+- Required libraries:
+  - PyTorch
+  - NumPy
+  - Scipy
+  - Pandas
 
-- Clone the repository
+### **Steps to Install**
+
+1. Clone the repository:
   
   ```bash
   git clone https://github.com/ZhijunBioinf/GDnet-IP.git
   cd GDnet-IP
   ```
   
-- Create and activate Conda environment
+2. Install dependencies:
   
   ```bash
-  conda env create -f environment.yml 
-  conda activate GDnet-IP
+  pip install -r requirements.txt
   ```
   
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
-  
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## Usage
 
-### Quick Start
+### **Prepare Your Dataset**
 
-To get started with GDnet-IP, you can load the GDnet-IP models directly by using the following Python script:
+Organize your insect images into folders based on their class. For example:
 
-```python
-from ?? import ??
-
-# Load the GDnet-IP model
-model = 
+```plaintext
+data/
+├── ants/
+│   ├── image1.jpg
+│   ├── image2.jpg
+├── bees/
+│   ├── image1.jpg
+│   ├── image2.jpg
 ```
 
+### **Train the Model**
+
+To train the model, run:
+
+```bash
+python GDnet-IP.py --train
+```
+
+### **Test the Model**
+
+To test the model on new images, run:
+
+```bash
+python GDnet-IP.py --test
+```
+
+### **Customize the Configuration**
+
+Adjust training parameters such as batch size and learning rate by modifying the `config.py` file or using command-line arguments.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Contact
+## Contributors
 
-Implementing: Dongcheng Li (dongchengli287@gmail.com)  
-Supervisor: Zhijun Dai (daizhijun@hunau.edu.cn)
+This project was developed by:
+
+- Dongcheng Li ([dongchengli287@gmail.com](mailto:dongchengli287@gmail.com)) - Implementing
+- Zhijun Dai ([daizhijun@hunau.edu.cn](mailto:daizhijun@hunau.edu.cn)) - Supervisor
+
+We welcome contributions from the community! Feel free to submit pull requests or raise issues.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## [Citation](https://www.mdpi.com/2077-0472/14/11/1915)
 
