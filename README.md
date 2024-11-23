@@ -40,7 +40,7 @@ GDnet-IP. Experimental results on a dataset containing 20 insect species (15 pes
 - Required libraries:
   - PyTorch
   - NumPy
-  - Scipy
+  - SciPy
   - Pandas
 
 ### **Steps to Install**
