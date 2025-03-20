@@ -77,25 +77,13 @@ data/
 │   ├── image2.jpg
 ```
 
-### **Train the Model**
+### **Perform k-fold cross validation using GDnet-IP model**
 
-To train the model, run:
-
-```bash
-python GDnet-IP.py --train
-```
-
-### **Test the Model**
-
-To test the model on new images, run:
+Just run the main function:
 
 ```bash
-python GDnet-IP.py --test
+python GDnet-IP.py
 ```
-
-### **Customize the Configuration**
-
-Adjust training parameters such as batch size and learning rate by modifying the `config.py` file or using command-line arguments.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
