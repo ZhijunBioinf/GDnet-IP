@@ -11,7 +11,8 @@ def similarity_euclid(data):  # Calculate similarity matrix
     Edist = squareform(Z)
     return Edist
 
-def nornaliz(data):  # Normalize diagonal
+
+def nornaliz(data):  # Normalize one row or one column with zeros in the diagonal
     nrow = data.shape[0]
     M = data.copy()
     np.fill_diagonal(M, 0)
@@ -24,12 +25,13 @@ def nornaliz(data):  # Normalize diagonal
     np.fill_diagonal(M, 0)
     return M
 
-def nornaliz_1(data):  # Normalize the entire matrix
+
+def nornaliz_1(data):  # Normalize the matrix
     M = (data - np.min(data)) / (np.max(data) - np.min(data))
     return M
 
 
-def my_anova1(X, Y):  # F test
+def my_anova1(X, Y):  # One way ANOVA
     labels = np.unique(Y)
     if len(labels) == 1:
         F = 0
@@ -57,7 +59,7 @@ def my_anova1(X, Y):  # F test
     return F, s2t, s2e
 
 
-def get_CH(Sdata, fy):  # Calculate RCH value
+def get_CH(Sdata, fy):  # Calculate the RCH value
     mcol = Sdata.shape[1]
     F = np.zeros(mcol)
     Mst = np.zeros(mcol)
@@ -69,12 +71,12 @@ def get_CH(Sdata, fy):  # Calculate RCH value
     return CH, CH_0
 
 
-def clustering(Sdata, C, w):    # K-means like clustering invoked by the main clustering function
+def clustering(Sdata, C, w): # K-means like clustering invoked by the main clustering function
     """
-    :param Sdata: normalized initial data to be clustered
-    :param C: centroid
-    :param w: weight
-    :return: sample belongings
+    :param Sdata: normalized initial data
+    :param C: centroids
+    :param w: distance weight
+    :return: clustering labels for each sample
     """
     nrow = Sdata.shape[0]
     K = C.shape[0]
@@ -102,7 +104,7 @@ def clustering(Sdata, C, w):    # K-means like clustering invoked by the main cl
     return fy
 
 
-def specify_K_means3(Sdata, E, R, K, w_step):
+def optimizeWeight(Sdata, E, R, K, w_step): # Optimize the distance weight
     nrow, mcol = Sdata.shape
     n_w = 1
     num_step = int(1 / w_step) + 1
@@ -153,15 +155,15 @@ def specify_K_means3(Sdata, E, R, K, w_step):
     return RCH_K_Y, RCH_K, w_optimal
 
 
-def WeDIV2(data, w_step, KList):
+def WeDIV2(data, w_step, KList): # Main function of WeDIV clustering
     """
-    WeDIV (Clustering algorithm involving Weighted Distance and a novel Internal Validation index)
-    :param data: initial data
-    :param w_step: step used in optimizing weight of Euclidean and Pearson distances (Euclidean distance is used if set to 1)
-    :param KList: range of clustering number to be optimized
-    :return Y_CL: clustering label for each data point (a sample or a feature)
-    :return K_optimal: optimal clustering number
-    :return W_optimal: optimal weight
+    WeDIV: clustering with Weighted Distance and novel Internal Validation index
+    :param data: a matrix, original dataset
+    :param w_step: step of distance weight to be optimized (only use Euclidean distance when setting as 1)
+    :param KList: a vector, range of the number of clustering
+    :return: Y_CL, final clustering labels for each sample
+    :return: K_optimal, optimal clustering number
+    :return: W_optimal, optimal distance weight between Pearson correlation and Euclidean distances
     """
     nrow = data.shape[0]
     Sdata = zscore(data, ddof=1)
@@ -175,7 +177,7 @@ def WeDIV2(data, w_step, KList):
     w_optimal = np.zeros(len(KList))
     for k in KList:
         nk = 0
-        RCH_K_Y[:, nk], RCH_K[nk], w_optimal[nk] = specify_K_means3(Sdata, E1, R1, k, w_step)
+        RCH_K_Y[:, nk], RCH_K[nk], w_optimal[nk] = optimizeWeight(Sdata, E1, R1, k, w_step)
     nk = nk + 1
     lab = np.argmax(RCH_K)
     max_RCH = max(RCH_K)
@@ -192,6 +194,5 @@ def WeDIV2(data, w_step, KList):
 
 
 if __name__ == '__main__':
-    Data = pd.read_excel(r'/path/to/your/data.xlsx', header=None)
-    Y_CL, optiKCluster, W_optimal = WeDIV2(Data.iloc[:, 1:].to_numpy(), 0.1, range(2, 9))
-
+    Qdata = pd.read_excel(r'/path/to/your/data.xlsx', header=None)
+    Y_CL, optiKCluster, W_optimal = WeDIV2(Qdata.iloc[:, 1:].to_numpy(), 0.1, range(2, 9))
